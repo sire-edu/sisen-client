@@ -1,0 +1,56 @@
+<template>
+  <div class="container signup-form">
+    <div class="row">
+      <div class="col-sm-8 col-md-6 col-lg-5 mr-auto ml-auto">
+        <div class="card">
+          <article class="card-body">
+            <a href="#/login" click.delegate="toLogin()" class="float-right oi oi-account-login oi-icon-float-right" title="Voltar para a tela de login"></a>
+            <h4 class="card-title mb-4 mt-1">Registre-se</h4>
+            <form submit.delegate="signUp()">
+              <div class="form-group">
+                <select value.bind="selectedInstitution & validate" class="form-control">
+                  <option model.bind="null">Instituição</option>
+                  <option repeat.for="institution of institutions"
+                          model.bind="institution">${institution.name}</option>
+                </select>              </div> <!-- form-group// -->
+              <div class="form-group">
+                <select value.bind="selectedProgram & validate" show.bind="selectedInstitution" class="form-control">
+                  <option model.bind="null">Programa</option>
+                  <option repeat.for="program of programs"
+                          model.bind="program">${program.name}</option>
+                </select>
+              </div> <!-- form-group// -->
+              <div class="form-group">
+                <select value.bind="signUpObj.class & validate" show.bind="selectedProgram" class="form-control">
+                  <option model.bind="null">Turma</option>
+                  <option repeat.for="class of classes"
+                          model.bind="class.id">
+                    ${class.description} - ${class.semester}/${class.year}
+                  </option>
+                </select>
+              </div> <!-- form-group// -->
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Primeiro nome" value.bind="signUpObj.first_name & validate" />
+              </div> <!-- form-group// -->
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Último nome" value.bind="signUpObj.last_name & validate" />
+              </div> <!-- form-group// -->
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="E-mail" value.bind="signUpObj.email & validate" />
+              </div> <!-- form-group// -->
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="Senha" value.bind="signUpObj.password & validate" />
+              </div> <!-- form-group// -->
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="Confirmar senha" value.bind="password_check & validate" />
+              </div> <!-- form-group// -->
+              <div class="form-group">
+                <button type="submit" class="btn btn-dark btn-block">Registrar-se</button>
+              </div> <!-- form-group// -->
+            </form>
+          </article>
+        </div> <!-- card.// -->
+      </div> <!-- col.// -->
+    </div> <!-- row.// -->
+  </div>
+</template>

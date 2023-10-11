@@ -1,0 +1,117 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~datatables.net-bs4/css/dataTables.bootstrap4.min.css";
+@import "~datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css";
+@import "~datatables.net-rowgroup-dt/css/rowGroup.dataTables.min.css";
+@import "~open-iconic/font/css/open-iconic-bootstrap.min.css";
+
+tr.even {
+  background-color: #f5f5f5;
+}
+
+body.dt-print-view {
+  overflow: auto;
+}
+
+.dataTable caption {
+  display: none;
+}
+
+.login-form {
+  margin-top:15vw;
+}
+
+.login-form #password-reset {
+  font-size: small;
+}
+
+.password-reset-form {
+  margin-top:15vw;
+}
+
+.password-reset-request-form {
+  margin-top:15vw;
+}
+
+.oi-icon-float-right {
+  line-height: 2;
+}
+
+.signup-form {
+  margin-top:7vw;
+}
+
+.toast-alert {
+  max-width: 350px;
+  overflow: hidden;
+  font-size: 0.875rem;
+}
+
+#toast-alerts-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  z-index: 999;
+}
+
+#answerForm label {
+  display: inherit;
+  margin-left: 1rem;
+}
+
+@media print
+{
+  .page-host {
+    position: absolute;
+    left: 10px;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    overflow-y: inherit;
+    overflow-x: inherit;
+  }
+}
+
+.justified-text {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.chart-wrapper {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+}
+
+li {
+  margin: 10px 0;
+}
+
+.answer {
+  background-color: #F7F8FA;
+}
+
+@-webkit-keyframes borderBlink {
+    from, to {
+        border: 1px solid transparent
+    }
+    50% {
+        border: 1px solid #F3C5C5;
+    }
+}
+
+@keyframes borderBlink {
+  from, to {
+    border: 1px solid transparent
+  }
+  50% {
+    border: 1px solid #F3C5C5;
+  }
+}
+
+.not-answered {
+  background-color: #FBF4F4;
+  -webkit-animation: borderBlink 5s step-end infinite;
+  animation: borderBlink 5s step-end infinite;
+}

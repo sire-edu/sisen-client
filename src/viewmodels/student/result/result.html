@@ -1,0 +1,31 @@
+<template>
+  <require from="resources/value-converters/date-format"></require>
+  <require from="resources/value-converters/percent-format"></require>
+  <require from="resources/nav-bar.html"></require>
+  <require from="aurelia-chart/elements/chart-element"></require>
+  <require from="aurelia-chart/attributes/chart-attribute"></require>
+  <div class="ui container page-host">
+    <nav-bar router.bind="router" auth.bind="authService"></nav-bar>
+    <div class="mt-3">
+      <compose if.bind="result.study.acronym === 'IM'" view-model="./IM" model.bind="result"></compose>
+      <compose if.bind="result.study.acronym === 'EA'" view-model="./EA" model.bind="result"></compose>
+    </div>
+    <table id="resultTable" class="table table-stripped" width="100%">
+      <thead class="thead-dark">
+        <th scope="col">Habilidade</th>
+        <th scope="col">Pontuação</th>
+      </thead>
+      <tbody>
+        <tr repeat.for="option of result.study_option_scores">
+          <th scope="row">${option.description}</th>
+          <td data-sort="${option.value}">${option.value | percentFormat}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="chart-wrapper mt-3">
+      <chart type.bind="chartType" native-options.bind="chartOptions" data.bind="chartData" style="display: block;"></chart>
+    </div>
+    <div class="form-buttons mb-3">
+      <button type="button" class="btn btn-dark" click.delegate="toHome()">Voltar</button>
+    </div>
+</template>

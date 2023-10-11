@@ -1,0 +1,36 @@
+<template>
+  <div class="container login-form">
+    <div class="row">
+      <div class="col-sm-8 col-md-6 col-lg-5 mr-auto ml-auto">
+        <div class="card">
+          <article class="card-body">
+            <a href="#/signup" click.delegate="toSignUp()" class="float-right btn btn-outline-dark">
+              Registrar-se
+            </a>
+            <h4 class="card-title mb-4 mt-1">Login</h4>
+            <form submit.delegate="login($event.target)" class="needs-validation" novalidate>
+              <div class="form-group">
+                <input id="input-email" class="form-control" placeholder="E-mail" type="email" value.bind="email" required autofocus>
+                <div class="invalid-feedback">
+                  E-mail é obrigatório e deve ser válido
+                </div>
+              </div> <!-- form-group// -->
+              <div class="form-group">
+                <input id="input-password" class="form-control" placeholder="Senha" type="password" value.bind="password" required>
+                <div class="invalid-feedback">
+                  Senha é obrigatória
+                </div>
+              </div> <!-- form-group// -->
+              <div class="form-group">
+                <button type="submit" class="btn btn-dark btn-block tooltip-do" data-placement="top" title="Tooltip on top">Login</button>
+              </div> <!-- form-group// -->
+            </form>
+            <a id="password-reset" href="#/password-reset" click.delegate="toPasswordReset()" class="float-right">
+              Esqueci a senha
+            </a>
+          </article>
+        </div> <!-- card.// -->
+      </div> <!-- col.// -->
+    </div> <!-- row.// -->
+  </div>
+</template>
