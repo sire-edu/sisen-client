@@ -81,9 +81,9 @@
     "webpack-dev-server": "^3.5.1"
   },
   "scripts": {
-    "build": "au build",
-    "start": "au run",
-    "test": "au test"
+    "build": "NODE_OPTIONS=--openssl-legacy-provider au build",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider au run",
+    "test": "NODE_OPTIONS=--openssl-legacy-provider au test"
   },
   "engines": {
     "node": ">=8.9.0"
