@@ -21,7 +21,7 @@
     "datatables.net-buttons-bs4": "^1.5.6",
     "datatables.net-rowgroup": "^1.1.0",
     "datatables.net-rowgroup-dt": "^1.1.0",
-    "jquery": "^3.5.0",
+    "jquery": "^3.5.1",
     "moment": "^2.24.0",
     "numeral": "^2.0.6",
     "open-iconic": "^1.1.1",
@@ -81,9 +81,9 @@
     "webpack-dev-server": "^3.5.1"
   },
   "scripts": {
-    "build": "au build",
-    "start": "au run",
-    "test": "au test"
+    "build": "NODE_OPTIONS=--openssl-legacy-provider au build",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider au run",
+    "test": "NODE_OPTIONS=--openssl-legacy-provider au test"
   },
   "engines": {
     "node": ">=8.9.0"
