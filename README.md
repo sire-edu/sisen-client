@@ -6,7 +6,7 @@ For more information, go to https://aurelia.io/docs/cli/webpack
 
 ## Run dev app
 
-Run `au run`, then open `http://localhost:8080`
+Run `npm run start`, then open `http://localhost:8080`
 
 To open browser automatically, do `au run --open`.
 
@@ -18,10 +18,10 @@ To enable hot module reload, do `au run --hmr`.
 
 ## Build for production
 
-Run `au build --env prod`.
+Run `npm run build`.
 
 ## Unit tests
 
-Run `au test` (or `au jest`).
+Run `npm run test` (or `au jest`).
 
 To run in watch mode, `au test --watch` or `au jest --watch`.
