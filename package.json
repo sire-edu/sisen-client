@@ -48,6 +48,7 @@
     "babel-plugin-istanbul": "^5.1.4",
     "copy-webpack-plugin": "^5.0.3",
     "core-js": "^3.1.3",
+    "cross-env": "^7.0.3",
     "css-loader": "^2.1.1",
     "del": "^4.1.1",
     "duplicate-package-checker-webpack-plugin": "^3.0.0",
@@ -81,9 +82,9 @@
     "webpack-dev-server": "^3.5.1"
   },
   "scripts": {
-    "build": "NODE_OPTIONS=--openssl-legacy-provider au build",
-    "start": "NODE_OPTIONS=--openssl-legacy-provider au run",
-    "test": "NODE_OPTIONS=--openssl-legacy-provider au test"
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider au build --env prod",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider au run",
+    "test": "cross-env NODE_OPTIONS=--openssl-legacy-provider au test"
   },
   "engines": {
     "node": ">=8.9.0"
