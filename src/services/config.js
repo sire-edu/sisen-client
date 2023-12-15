@@ -1,5 +1,5 @@
 export default {
-	baseUrl: 'http://localhost:8000/api/v1',
+	baseUrl: 'http://54.94.120.131/api/v1',
 	authTokenUrl: '/auth',
 	authTokenRefreshUrl: '/auth-refresh',
   passwordResetRequestUrl: '/password-reset/',
